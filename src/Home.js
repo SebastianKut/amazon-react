@@ -18,6 +18,7 @@ function Home() {
             return (
               <Product
                 key={id}
+                id={id}
                 title={title}
                 price={price}
                 image={image}
@@ -32,6 +33,7 @@ function Home() {
             return (
               <Product
                 key={id}
+                id={id}
                 title={title}
                 price={price}
                 image={image}
@@ -46,6 +48,7 @@ function Home() {
             return (
               <Product
                 key={id}
+                id={id}
                 title={title}
                 price={price}
                 image={image}

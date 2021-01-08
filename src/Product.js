@@ -1,9 +1,26 @@
 import React from 'react';
 import './Product.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
+import { useGlobalContext } from './StateProvider';
 //import StarHalfOutlinedIcon from '@material-ui/icons/StarHalfOutlined';
 
-function Product({ title, price, image, rating }) {
+function Product({ id, title, price, image, rating }) {
+  const [{ basket }, dispatch] = useGlobalContext();
+
+  console.log('basket>>>', basket);
+
+  const addToBasket = () => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      payload: {
+        id,
+        title,
+        price,
+        image,
+        rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product__info">
@@ -21,7 +38,7 @@ function Product({ title, price, image, rating }) {
         </div>
       </div>
       <img src={image} alt="" />
-      <button>Add to Cart</button>
+      <button onClick={addToBasket}>Add to Cart</button>
     </div>
   );
 }
