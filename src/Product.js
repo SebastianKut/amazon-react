@@ -1,6 +1,7 @@
 import React from 'react';
 import './Product.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
+//import StarHalfOutlinedIcon from '@material-ui/icons/StarHalfOutlined';
 
 function Product({ title, price, image, rating }) {
   return (
@@ -20,7 +21,7 @@ function Product({ title, price, image, rating }) {
         </div>
       </div>
       <img src={image} alt="" />
-      <button>Add to basket</button>
+      <button>Add to Cart</button>
     </div>
   );
 }
