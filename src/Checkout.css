@@ -15,3 +15,11 @@
   padding: 10px;
   border-bottom: 1px solid lightgray;
 }
+
+.checkout__name {
+  padding: 10px;
+}
+
+.checkout__right {
+  margin-left: 20px;
+}

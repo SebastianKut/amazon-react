@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './CheckoutProduct.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
 import { useGlobalContext } from './StateProvider';
@@ -7,7 +7,7 @@ function CheckoutProduct({ id, image, title, price, rating, basketId }) {
   const [{ basket }, dispatch] = useGlobalContext();
   const removeFromBasket = () => {
     dispatch({
-      typeh: 'REMOVE_FROM_BASKET',
+      type: 'REMOVE_FROM_BASKET',
       payload: basketId,
     });
   };
@@ -34,5 +34,4 @@ function CheckoutProduct({ id, image, title, price, rating, basketId }) {
     </div>
   );
 }
-
 export default CheckoutProduct;

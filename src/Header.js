@@ -3,11 +3,19 @@ import './Header.css';
 import logo from './media/amazon-logo.png';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useGlobalContext } from './StateProvider';
+import { auth } from './firebase';
 
 function Header() {
-  const [{ basket }, dispatch] = useGlobalContext();
+  const [{ basket, user }, dispatch] = useGlobalContext();
+  const history = useHistory();
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+      history.push('/');
+    }
+  };
 
   return (
     <div className="header">
@@ -20,10 +28,16 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
+        <Link to={!user && '/login'}>
+          <div className="header__option" onClick={handleAuth}>
+            <span className="header__optionLineOne">
+              Hello {user ? user.email : 'Guest'}
+            </span>
+            <span className="header__optionLineTwo">
+              {user ? 'Sign Out' : 'Sign In'}
+            </span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>
@@ -32,7 +46,7 @@ function Header() {
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
-        <Link to="/checkout">
+        <Link to="/basket">
           <div className="header__optionBasket">
             <ShoppingCartOutlinedIcon />
             <span className="header__optionLineTwo header__basketCount">
