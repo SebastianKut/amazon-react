@@ -3,6 +3,7 @@ import './Product.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
 import { useGlobalContext } from './StateProvider';
 //import StarHalfOutlinedIcon from '@material-ui/icons/StarHalfOutlined';
+import { v4 as uuidv4 } from 'uuid';
 
 function Product({ id, title, price, image, rating }) {
   const [{ basket }, dispatch] = useGlobalContext();
@@ -18,6 +19,7 @@ function Product({ id, title, price, image, rating }) {
         price,
         image,
         rating,
+        basketId: uuidv4(),
       },
     });
   };
