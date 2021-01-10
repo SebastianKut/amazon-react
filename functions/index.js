@@ -22,14 +22,11 @@ app.post('/payment/create', async (req, res) => {
   const total = req.query.total;
 
   console.log('Payment Request received for following amount >>>', total);
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: total,
-      currency: 'usd',
-    });
-  } catch (error) {
-    console.log(error);
-  }
+
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: total,
+    currency: 'usd',
+  });
 
   res.status(201).send({
     clientSecret: paymentIntent.client_secret,
@@ -40,4 +37,4 @@ app.post('/payment/create', async (req, res) => {
 exports.api = functions.https.onRequest(app);
 
 //Example endpoint
-//http://localhost:5001/clone-ef788/us-central1/api  --> this is cloud functions run locally to start run: "firebase emulators:start"
+//http://localhost:5001/clone-ef788/us-central1/api  --> this is cloud functions run locally to start run: "firebase emulators:start" in the bash console

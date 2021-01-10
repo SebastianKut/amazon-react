@@ -27,7 +27,9 @@ function Payment() {
       const response = await axios({
         method: 'post',
         //stripe expects payment in subunits (ex.pennies or cents)
-        url: `/payment/create?total=${getBasketTotal(basket) * 100}`,
+        url: `/payment/create?total=${Math.floor(
+          getBasketTotal(basket) * 100
+        )}`,
       });
       setClientSecret(response.data.clientSecret);
     };
