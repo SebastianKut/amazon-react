@@ -8,6 +8,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import { auth } from './firebase';
 import { useGlobalContext } from './StateProvider';
+import { loadStripe } from '@stripe/stripe-js'; //npm install @stripe/stripe-js
+import { Elements } from '@stripe/react-stripe-js'; //npm install @stripe/react-stripe-js
+
+const promise = loadStripe(
+  'pk_test_51I7wrjLZv7WKvm6KLSx3FzeQ8fuxzQAdcH11QlQRFRY2qwPCmZzfOSegwCdXvofJzphwj9OjnJSqQyMOqnlio8sY00acMndlb8'
+);
 
 function App() {
   const [{}, dispatch] = useGlobalContext();
@@ -46,7 +52,10 @@ function App() {
           </Route>
           <Route path="/checkout">
             <Header />
-            <Payment />
+            {/* wrap Payment component in stripe */}
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
         </Switch>
       </div>
