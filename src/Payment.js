@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
-import axios from './axios'; //axios instance from axios.js
+import axios from './axios';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useGlobalContext();
@@ -22,6 +22,7 @@ function Payment() {
 
   useEffect(() => {
     //to process payment from customer ClientSecret is required with the right amount, that has to change everytime basket changes
+    //this is required from stripe on our express server on cloud functions, then send back to frontend from cloud functions
     const getClientSecret = async () => {
       const response = await axios({
         method: 'post',
@@ -32,6 +33,8 @@ function Payment() {
     };
     getClientSecret();
   }, [basket]);
+
+  console.log('client secret is -->>>', clientSecret);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +52,8 @@ function Payment() {
         setProcessing(false);
         //prevent going back in the browser
         history.replace('/orders');
-      });
+      })
+      .catch((err) => console.log(err));
   };
 
   const handleChange = (e) => {
