@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import axios from './axios';
+import { db } from './firebase';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useGlobalContext();
@@ -24,17 +25,19 @@ function Payment() {
     //to process payment from customer ClientSecret is required with the right amount, that has to change everytime basket changes
     //this is required from stripe on our express server on cloud functions, then send back to frontend from cloud functions
     const getClientSecret = async () => {
-      const response = await axios({
-        method: 'post',
-        //stripe expects payment in subunits (ex.pennies or cents)
-        url: `/payment/create?total=${Math.floor(
-          getBasketTotal(basket) * 100
-        )}`,
-      });
-      setClientSecret(response.data.clientSecret);
+      if (getBasketTotal(basket) > 0) {
+        const response = await axios({
+          method: 'post',
+          //stripe expects payment in subunits (ex.pennies or cents)
+          url: `/payment/create?total=${Math.floor(
+            getBasketTotal(basket) * 100
+          )}`,
+        });
+        setClientSecret(response.data.clientSecret);
+      }
     };
     getClientSecret();
-  }, [basket]);
+  }, [basket && basket]);
 
   console.log('client secret is -->>>', clientSecret);
 
@@ -49,10 +52,25 @@ function Payment() {
       })
       .then((res) => {
         const { paymentIntent } = res;
+        //push order to firebase database
+        db.collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
-        //prevent going back in the browser
+
+        dispatch({
+          type: 'EMPTY_BASKET',
+        });
+        //redirect and prevent going back in the browser
         history.replace('/orders');
       })
       .catch((err) => console.log(err));
