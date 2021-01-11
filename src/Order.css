@@ -1,0 +1,23 @@
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.order__total {
+  font-weight: 500;
+  text-align: right;
+}
+
+.order > h2 {
+  margin-bottom: 10px;
+}
+
+.order__number {
+  margin: 10px 0;
+}
+
+.order__date {
+  margin-bottom: 50px;
+}

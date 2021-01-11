@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
 import { useGlobalContext } from './StateProvider';
@@ -8,7 +8,6 @@ import { useHistory } from 'react-router-dom';
 function Subtotal() {
   const history = useHistory();
   const [{ basket }, dispatch] = useGlobalContext();
-  const [isDisabled, setIsDisabled] = useState(true);
 
   return (
     <div className="subtotal">

@@ -3,7 +3,15 @@ import './CheckoutProduct.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
 import { useGlobalContext } from './StateProvider';
 
-function CheckoutProduct({ id, image, title, price, rating, basketId }) {
+function CheckoutProduct({
+  id,
+  image,
+  title,
+  price,
+  rating,
+  basketId,
+  hideButton,
+}) {
   const [{ basket }, dispatch] = useGlobalContext();
   const removeFromBasket = () => {
     dispatch({
@@ -29,7 +37,9 @@ function CheckoutProduct({ id, image, title, price, rating, basketId }) {
               <StarRateOutlinedIcon />
             ))}
         </div>
-        <button onClick={removeFromBasket}>Remove from Cart</button>
+        {!hideButton && (
+          <button onClick={removeFromBasket}>Remove from Cart</button>
+        )}
       </div>
     </div>
   );
