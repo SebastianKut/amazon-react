@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import Header from './Header';
+import Navbar from './Navbar';
 import Home from './Home';
+import Shop from './Shop';
 import Login from './Login';
 import Payment from './Payment';
 import Orders from './Orders';
@@ -42,7 +44,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header />
+            <Navbar />
             <Home />
+          </Route>
+          <Route path="/shop">
+            <Header />
+            <Shop />
           </Route>
           <Route exact path="/login">
             <Login />
