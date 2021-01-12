@@ -1,0 +1,25 @@
+.footerColumn {
+  color: white;
+  width: 180px;
+}
+
+.footerColumn > h3 {
+  font-size: 16px;
+  font-weight: 800;
+  padding: 10px 0;
+}
+
+.footerColumn > ul {
+  font-size: 14px;
+  font-weight: 500;
+  list-style-type: none;
+}
+
+.footerColumn > ul > li {
+  padding: 5px 0;
+  color: #dddddd;
+}
+
+.footerColumn > ul > li > a:hover {
+  border-bottom: 1px solid #dddddd;
+}

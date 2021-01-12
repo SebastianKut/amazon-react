@@ -25,6 +25,7 @@
   align-items: center;
   font-size: 15px;
   font-weight: 700;
+  margin-right: 10px;
 }
 
 .navbar__right > p {

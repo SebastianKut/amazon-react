@@ -7,6 +7,7 @@ import Shop from './Shop';
 import Login from './Login';
 import Payment from './Payment';
 import Orders from './Orders';
+import Footer from './Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import { auth } from './firebase';
@@ -46,10 +47,13 @@ function App() {
             <Header />
             <Navbar />
             <Home />
+            <Footer />
           </Route>
           <Route path="/shop">
             <Header />
+            <Navbar />
             <Shop />
+            <Footer />
           </Route>
           <Route exact path="/login">
             <Login />
