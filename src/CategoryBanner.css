@@ -1,0 +1,52 @@
+.categoryBanner {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  max-height: 280px;
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 10px 20px;
+  padding: 20px;
+}
+
+.banner__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.banner__title > span {
+  align-self: flex-end;
+}
+
+.banner__title > span > h2 {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 22px;
+  color: #444444;
+}
+
+.banner__title > span > a {
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #007185;
+}
+
+.banner__images {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner__images > img {
+  object-fit: contain;
+  height: 100%;
+  margin-right: 30px;
+}
