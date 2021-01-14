@@ -2,13 +2,23 @@ import React from 'react';
 import './SideMenu.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CloseIcon from '@material-ui/icons/Close';
+import { useGlobalContext } from './StateProvider';
 
 function SideMenu() {
+  const [{ showMenu }, dispatch] = useGlobalContext();
+
+  const handleHideMenu = () => {
+    dispatch({
+      type: 'HIDE_MENU',
+      payload: false,
+    });
+  };
   return (
-    <div className="sideMenu">
+    <div className={`sideMenu ${showMenu && 'show'}`}>
       <div className="sideMenu__container">
         <div className="sideMenu__title">
-          <AccountCircleIcon /> <h3>Hello, Sign In</h3>
+          <AccountCircleIcon />
+          <h3>Hello, Sign In</h3>
         </div>
         <div className="sideMenu__links">
           <div className="sideMenu__links__section">
@@ -50,7 +60,7 @@ function SideMenu() {
           </div>
         </div>
       </div>
-      <div className="sideMenu__close">
+      <div className="sideMenu__close" onClick={handleHideMenu}>
         <CloseIcon />
       </div>
     </div>

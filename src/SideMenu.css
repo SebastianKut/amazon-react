@@ -1,6 +1,16 @@
 .sideMenu {
+  position: absolute;
+  left: -100rem;
+  z-index: 9999;
   height: 100vh;
   display: flex;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.sideMenu.show {
+  left: 0;
+  opacity: 1;
 }
 
 .sideMenu__container {
@@ -53,11 +63,11 @@
   padding: 10px;
   background: transparent;
   color: white;
-
   height: 30px;
   width: 20px;
   display: flex;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .sideMenu__close .MuiSvgIcon-root {

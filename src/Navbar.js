@@ -1,12 +1,21 @@
 import React from 'react';
 import './Navbar.css';
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
+import { useGlobalContext } from './StateProvider';
 
 function Navbar() {
+  const [{}, dispatch] = useGlobalContext();
+
+  const handleShowMenu = () => {
+    dispatch({
+      type: 'SHOW_MENU',
+      payload: true,
+    });
+  };
   return (
     <div className="navbar">
       <div className="navbar__left">
-        <div className="navbar__menu">
+        <div className="navbar__menu" onClick={handleShowMenu}>
           <MenuOutlinedIcon />
           <p>All</p>
         </div>
