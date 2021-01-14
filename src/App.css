@@ -1,3 +1,21 @@
 .app {
   position: relative;
 }
+
+.app.overlay {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app.overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black none no-repeat 0 0;
+  opacity: 0.8;
+  z-index: 900;
+  transition: 0.3s;
+}

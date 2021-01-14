@@ -1,11 +1,11 @@
 .sideMenu {
-  position: absolute;
+  position: fixed;
   left: -100rem;
-  z-index: 9999;
   height: 100vh;
   display: flex;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  z-index: 9999;
 }
 
 .sideMenu.show {
@@ -36,6 +36,7 @@
 }
 
 .sideMenu__links {
+  height: calc(100vh - 55px);
   overflow-y: scroll;
 }
 
@@ -49,7 +50,7 @@
 }
 
 .sideMenu__links__section > ul > li {
-  padding: 10px 30px;
+  padding: 15px 30px;
   font-size: 14px;
   font-weight: 500;
 }
@@ -71,5 +72,5 @@
 }
 
 .sideMenu__close .MuiSvgIcon-root {
-  font-size: 40px;
+  font-size: 35px;
 }

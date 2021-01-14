@@ -3,16 +3,18 @@ import './Home.css';
 import CategoryRow from './CategoryRow';
 import CategoryBanner from './CategoryBanner';
 import { categoryRows, categoryBanners } from './categories';
+import Carousel from 'react-elastic-carousel';
+import { heroImages } from './data/heroImages';
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2021/NYNY/Fuji_TallHero_NYNY_en_US_2x._CB412256578_.jpg"
-          alt=""
-        />
+        <Carousel pagination={false} enableTilt={true}>
+          {heroImages.map((img, index) => (
+            <img className="home__image" src={img} key={index} />
+          ))}
+        </Carousel>
         <CategoryRow categories={categoryRows.slice(0, 4)} />
         <CategoryRow categories={categoryRows.slice(4, 8)} />
         <CategoryBanner

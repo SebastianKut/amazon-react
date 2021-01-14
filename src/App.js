@@ -21,7 +21,7 @@ const promise = loadStripe(
 );
 
 function App() {
-  const [{}, dispatch] = useGlobalContext();
+  const [{ showMenu }, dispatch] = useGlobalContext();
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
+      <div className={`app ${showMenu && 'overlay'}`}>
         <Switch>
           <Route exact path="/">
             <SideMenu />

@@ -36,6 +36,11 @@
   color: #007185;
 }
 
+.banner__title > span > a:hover {
+  text-decoration: underline;
+  color: #c7511f;
+}
+
 .banner__images {
   height: 300px;
   display: flex;

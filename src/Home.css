@@ -12,7 +12,44 @@
 
 .home__image {
   width: 100%;
-  z-index: -10;
-  margin-bottom: -350px;
   /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+}
+
+/* SLIDER */
+
+.rec-carousel-wrapper {
+  margin-bottom: -360px;
+}
+
+.rec-carousel {
+  position: relative;
+}
+
+.rec-arrow-left,
+.rec-arrow-right {
+  position: absolute;
+  z-index: 500;
+  top: 100px;
+  font-size: 2.5rem !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.rec-arrow-left:hover,
+.rec-arrow-right:hover {
+  cursor: auto;
+}
+
+.rec-arrow-left {
+  left: 10px;
+}
+
+.rec-arrow-right {
+  right: 10px;
+}
+
+.rec-slider-container {
+  margin: 0 !important;
+  z-index: -1;
 }

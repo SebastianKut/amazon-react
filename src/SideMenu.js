@@ -55,7 +55,7 @@ function SideMenu() {
               <li>English</li>
               <li>Help</li>
               <li>United States</li>
-              <li>Sign In</li>
+              <li>Sign in</li>
             </ul>
           </div>
         </div>
