@@ -1,0 +1,65 @@
+.sideMenu {
+  height: 100vh;
+  display: flex;
+}
+
+.sideMenu__container {
+  background-color: white;
+  width: 375px;
+}
+
+.sideMenu__title {
+  padding: 10px 30px;
+  background: #232f3e;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.sideMenu__title > h3 {
+  margin-left: 10px;
+}
+
+.sideMenu__title .MuiSvgIcon-root {
+  font-size: 30px;
+}
+
+.sideMenu__links {
+  overflow-y: scroll;
+}
+
+.sideMenu__links__section {
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+
+.sideMenu__links__section > h3 {
+  padding: 10px 30px 10px 30px;
+}
+
+.sideMenu__links__section > ul > li {
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sideMenu__links__section > ul > li:hover {
+  background-color: #eaeded;
+  cursor: pointer;
+}
+
+.sideMenu__close {
+  padding: 10px;
+  background: transparent;
+  color: white;
+
+  height: 30px;
+  width: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sideMenu__close .MuiSvgIcon-root {
+  font-size: 40px;
+}

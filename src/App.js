@@ -14,6 +14,7 @@ import { auth } from './firebase';
 import { useGlobalContext } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js'; //npm install @stripe/stripe-js
 import { Elements } from '@stripe/react-stripe-js'; //npm install @stripe/react-stripe-js
+import SideMenu from './SideMenu';
 
 const promise = loadStripe(
   'pk_test_51I7wrjLZv7WKvm6KLSx3FzeQ8fuxzQAdcH11QlQRFRY2qwPCmZzfOSegwCdXvofJzphwj9OjnJSqQyMOqnlio8sY00acMndlb8'
@@ -44,6 +45,7 @@ function App() {
       <div className="app">
         <Switch>
           <Route exact path="/">
+            <SideMenu />
             <Header />
             <Navbar />
             <Home />
