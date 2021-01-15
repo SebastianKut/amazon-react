@@ -1,5 +1,6 @@
 import React from 'react';
 import './CategoryBanner.css';
+import { Link } from 'react-router-dom';
 
 function CategoryBanner({ title, link, images }) {
   return (
@@ -8,9 +9,8 @@ function CategoryBanner({ title, link, images }) {
         <span>
           <h2>{title}</h2>
         </span>
-
         <span>
-          <a href="#">{link}</a>
+          <Link to="/shop">{link}</Link>
         </span>
       </div>
       <div className="banner__images">

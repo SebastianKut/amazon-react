@@ -5,7 +5,7 @@ import { useGlobalContext } from './StateProvider';
 //import StarHalfOutlinedIcon from '@material-ui/icons/StarHalfOutlined';
 import { v4 as uuidv4 } from 'uuid';
 
-function Product({ id, title, price, image, rating }) {
+function Product({ id, title, price, image, rating, global_ratings }) {
   const [{ basket }, dispatch] = useGlobalContext();
 
   console.log('basket>>>', basket);

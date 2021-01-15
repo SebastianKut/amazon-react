@@ -3,7 +3,11 @@
   justify-content: space-between;
   background-color: #232f3e;
   color: white;
-  padding: 5px 20px;
+  padding: 5px 10px;
+  position: sticky;
+  top: 60px;
+  z-index: 7899;
+  height: 30px;
 }
 
 .navbar__left {
@@ -32,8 +36,9 @@
 
 .navbar__right > p {
   text-align: right;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 25px;
 }
 
 .nav__border {

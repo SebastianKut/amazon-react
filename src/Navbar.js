@@ -27,7 +27,7 @@ function Navbar() {
           <li className="nav__link nav__border">Registry</li>
         </ul>
       </div>
-      <div className="navbar__right">
+      <div className="navbar__right nav__border">
         <p>Amazon's response to COVID-19</p>
       </div>
     </div>

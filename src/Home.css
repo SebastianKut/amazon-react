@@ -30,16 +30,17 @@
   position: absolute;
   z-index: 6999;
   top: 100px;
+  font-weight: 100 !important;
   font-size: 2.5rem !important;
   background-color: transparent !important;
   box-shadow: none !important;
-  color: white !important;
+  color: rgb(0, 0, 0, 0.5) !important;
 }
 
-.rec-arrow-left:hover,
+/* .rec-arrow-left:hover,
 .rec-arrow-right:hover {
   cursor: auto;
-}
+} */
 
 .rec-arrow-left {
   left: 10px;

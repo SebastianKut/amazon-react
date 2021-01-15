@@ -52,6 +52,7 @@ function App() {
             <Footer />
           </Route>
           <Route path="/shop">
+            <SideMenu />
             <Header />
             <Navbar />
             <Shop />
@@ -61,19 +62,28 @@ function App() {
             <Login />
           </Route>
           <Route path="/basket">
+            <SideMenu />
             <Header />
+            <Navbar />
             <Checkout />
+            <Footer />
           </Route>
           <Route path="/checkout">
+            <SideMenu />
             <Header />
+            <Navbar />
             {/* wrap Payment component in stripe */}
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+            <Footer />
           </Route>
           <Route path="/orders">
+            <SideMenu />
             <Header />
+            <Navbar />
             <Orders />
+            <Footer />
           </Route>
         </Switch>
       </div>

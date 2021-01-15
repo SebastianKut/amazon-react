@@ -13,7 +13,7 @@ function Shop() {
           alt=""
         />
         <div className="shop__row">
-          {products.slice(0, 2).map((product) => {
+          {products.slice(0, 5).map((product) => {
             const { id, title, rating, price, image } = product;
             return (
               <Product
@@ -28,7 +28,7 @@ function Shop() {
           })}
         </div>
         <div className="shop__row">
-          {products.slice(2, 5).map((product) => {
+          {products.slice(5, 10).map((product) => {
             const { id, title, rating, price, image } = product;
             return (
               <Product
@@ -43,7 +43,37 @@ function Shop() {
           })}
         </div>
         <div className="shop__row">
-          {products.slice(5).map((product) => {
+          {products.slice(10, 15).map((product) => {
+            const { id, title, rating, price, image } = product;
+            return (
+              <Product
+                key={id}
+                id={id}
+                title={title}
+                price={price}
+                image={image}
+                rating={rating}
+              />
+            );
+          })}
+        </div>
+        <div className="shop__row">
+          {products.slice(15, 20).map((product) => {
+            const { id, title, rating, price, image } = product;
+            return (
+              <Product
+                key={id}
+                id={id}
+                title={title}
+                price={price}
+                image={image}
+                rating={rating}
+              />
+            );
+          })}
+        </div>
+        <div className="shop__row">
+          {products.slice(20, 25).map((product) => {
             const { id, title, rating, price, image } = product;
             return (
               <Product

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Category.css';
+import { Link } from 'react-router-dom';
 
 function Category({ title, image }) {
   return (
@@ -10,8 +11,9 @@ function Category({ title, image }) {
       <div className="category__image">
         <img src={image} alt="" />
       </div>
+
       <div className="category__footer">
-        <a href="#">Shop now</a>
+        <Link to="/shop">Shop now </Link>
       </div>
     </div>
   );

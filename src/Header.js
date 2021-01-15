@@ -65,7 +65,7 @@ function Header() {
             </div>
           </div>
         </Link>
-        <Link to="/basket">
+        <Link to="/basket" className="header__basket">
           <div className="header__border">
             <div className="header__optionBasket">
               <ShoppingCartOutlinedIcon />
