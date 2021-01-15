@@ -31,6 +31,7 @@ function Subtotal() {
       <button
         onClick={() => history.push('/checkout')}
         disabled={basket.length === 0 && true}
+        className={`${basket.length === 0 && 'checkout__disabled'}`}
       >
         Proceed to Checkout
       </button>

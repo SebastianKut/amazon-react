@@ -37,11 +37,6 @@
   color: rgb(0, 0, 0, 0.5) !important;
 }
 
-/* .rec-arrow-left:hover,
-.rec-arrow-right:hover {
-  cursor: auto;
-} */
-
 .rec-arrow-left {
   left: 10px;
 }

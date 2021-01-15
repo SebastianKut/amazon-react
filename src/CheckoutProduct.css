@@ -8,7 +8,7 @@
 }
 
 .checkoutProduct__info > button {
-  background: #f0c14b;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   border-radius: 2px;
   border: 1px solid;
   margin-top: 10px;
@@ -17,10 +17,19 @@
   padding: 5px;
 }
 
+.checkoutProduct__info > button:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #fddb85, #eeba38);
+}
+
 .checkoutProduct__image {
-  object-fit: contain;
+  display: flex;
   width: 180px;
   height: 180px;
+}
+
+.checkoutProduct__image > img {
+  object-fit: contain;
 }
 
 .checkoutProduct__rating {

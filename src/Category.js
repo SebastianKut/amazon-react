@@ -11,7 +11,6 @@ function Category({ title, image }) {
       <div className="category__image">
         <img src={image} alt="" />
       </div>
-
       <div className="category__footer">
         <Link to="/shop">Shop now </Link>
       </div>

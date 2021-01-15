@@ -5,6 +5,10 @@
   max-width: 1500px;
 }
 
+.shop__container {
+  padding-bottom: 10px;
+}
+
 .shop__row {
   display: flex;
   z-index: 1;

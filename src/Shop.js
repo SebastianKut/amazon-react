@@ -14,7 +14,7 @@ function Shop() {
         />
         <div className="shop__row">
           {products.slice(0, 5).map((product) => {
-            const { id, title, rating, price, image } = product;
+            const { id, title, rating, price, image, global_ratings } = product;
             return (
               <Product
                 key={id}
@@ -23,13 +23,14 @@ function Shop() {
                 price={price}
                 image={image}
                 rating={rating}
+                global_ratings={global_ratings}
               />
             );
           })}
         </div>
         <div className="shop__row">
           {products.slice(5, 10).map((product) => {
-            const { id, title, rating, price, image } = product;
+            const { id, title, rating, price, image, global_ratings } = product;
             return (
               <Product
                 key={id}
@@ -38,13 +39,14 @@ function Shop() {
                 price={price}
                 image={image}
                 rating={rating}
+                global_ratings={global_ratings}
               />
             );
           })}
         </div>
         <div className="shop__row">
           {products.slice(10, 15).map((product) => {
-            const { id, title, rating, price, image } = product;
+            const { id, title, rating, price, image, global_ratings } = product;
             return (
               <Product
                 key={id}
@@ -53,13 +55,14 @@ function Shop() {
                 price={price}
                 image={image}
                 rating={rating}
+                global_ratings={global_ratings}
               />
             );
           })}
         </div>
         <div className="shop__row">
           {products.slice(15, 20).map((product) => {
-            const { id, title, rating, price, image } = product;
+            const { id, title, rating, price, image, global_ratings } = product;
             return (
               <Product
                 key={id}
@@ -68,13 +71,14 @@ function Shop() {
                 price={price}
                 image={image}
                 rating={rating}
+                global_ratings={global_ratings}
               />
             );
           })}
         </div>
         <div className="shop__row">
           {products.slice(20, 25).map((product) => {
-            const { id, title, rating, price, image } = product;
+            const { id, title, rating, price, image, global_ratings } = product;
             return (
               <Product
                 key={id}
@@ -83,6 +87,7 @@ function Shop() {
                 price={price}
                 image={image}
                 rating={rating}
+                global_ratings={global_ratings}
               />
             );
           })}

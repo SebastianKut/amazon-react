@@ -106,7 +106,7 @@ export const products = [
     id: uuidv4(),
     title:
       'AstroAI Balaclava Ski Mask Winter Face Mask for Cold Weather Windproof Breathable for Men Women Skiing Snowboarding & Motorcycle Riding, Black Small Size',
-    price: 4,
+    price: 4.0,
     rating: 5,
     global_ratings: 11.36,
     image:
@@ -223,7 +223,7 @@ export const products = [
     id: uuidv4(),
     title:
       'beyerdynamic DT 770 PRO 80 Ohm Over-Ear Studio Headphones in black. Enclosed design, wired for professional recording and monitoring ',
-    price: 159,
+    price: 159.21,
     rating: 5,
     global_ratings: 9457,
     image:
@@ -233,7 +233,7 @@ export const products = [
     id: uuidv4(),
     title:
       'AKAI Professional MPK Mini MK3 | 25 Key USB MIDI Keyboard Controller With 8 Backlit Drum Pads, 8 Knobs and Music Production Software Included ',
-    price: 119,
+    price: 119.99,
     rating: 5,
     global_ratings: 11457,
     image:

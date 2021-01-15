@@ -79,7 +79,13 @@ function Payment() {
   const handleChange = (e) => {
     //listen for changes in CardElement and display errors as customer types card details
     setDisabled(e.empty);
-    setError(e.error ? e.error.message : '');
+    if (e.error) {
+      setError(e.error.message);
+      setDisabled(true);
+    } else {
+      setError('');
+      setDisabled(false);
+    }
   };
 
   return (
@@ -129,7 +135,7 @@ function Payment() {
                   prefix={'$'}
                 />
                 <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
+                  <span>{processing ? 'Processing...' : 'Buy Now'}</span>
                 </button>
                 {error && <div>{error}</div>}
               </div>
