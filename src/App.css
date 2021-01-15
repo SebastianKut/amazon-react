@@ -16,6 +16,6 @@
   height: 100%;
   background: black none no-repeat 0 0;
   opacity: 0.8;
-  z-index: 900;
+  z-index: 8900;
   transition: 0.3s;
 }

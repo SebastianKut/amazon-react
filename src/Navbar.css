@@ -3,7 +3,7 @@
   justify-content: space-between;
   background-color: #232f3e;
   color: white;
-  padding: 7px 20px;
+  padding: 5px 20px;
 }
 
 .navbar__left {
@@ -13,7 +13,7 @@
 .navbar__links {
   min-width: 450px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   list-style-type: none;
   font-size: 13px;
@@ -34,4 +34,18 @@
   text-align: right;
   font-size: 15px;
   font-weight: 700;
+}
+
+.nav__border {
+  border: 1px solid transparent;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.nav__border:hover {
+  border: 1px solid white;
+}
+
+.nav__link {
+  padding: 5px;
 }

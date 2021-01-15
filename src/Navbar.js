@@ -15,16 +15,16 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__left">
-        <div className="navbar__menu" onClick={handleShowMenu}>
+        <div className="navbar__menu nav__border" onClick={handleShowMenu}>
           <MenuOutlinedIcon />
           <p>All</p>
         </div>
         <ul className="navbar__links">
-          <li className="nav__link">Today's Deals</li>
-          <li className="nav__link">Customer Service</li>
-          <li className="nav__link">Gift Cards</li>
-          <li className="nav__link">Sell</li>
-          <li className="nav__link">Registry</li>
+          <li className="nav__link nav__border">Today's Deals</li>
+          <li className="nav__link nav__border">Customer Service</li>
+          <li className="nav__link nav__border">Gift Cards</li>
+          <li className="nav__link nav__border">Sell</li>
+          <li className="nav__link nav__border">Registry</li>
         </ul>
       </div>
       <div className="navbar__right">
