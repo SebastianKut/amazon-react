@@ -5,7 +5,7 @@ import CheckoutProduct from './CheckoutProduct';
 import { useGlobalContext } from './StateProvider';
 
 function Checkout() {
-  const [{ basket, user }, dispatch] = useGlobalContext();
+  const [{ basket, user }] = useGlobalContext();
   return (
     <div className="checkout">
       <div className="checkout__left">

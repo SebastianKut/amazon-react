@@ -32,7 +32,7 @@ function Login() {
   return (
     <div className="login">
       <Link to="/">
-        <img src={logo} className="login__logo" />
+        <img src={logo} alt="" className="login__logo" />
       </Link>
       <div className="login__container">
         <h1>Sign-In</h1>

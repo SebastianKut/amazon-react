@@ -5,7 +5,7 @@ import { db } from './firebase';
 import Order from './Order';
 
 function Orders() {
-  const [{ user }, dispatch] = useGlobalContext();
+  const [{ user }] = useGlobalContext();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

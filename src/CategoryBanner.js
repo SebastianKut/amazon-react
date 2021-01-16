@@ -15,7 +15,7 @@ function CategoryBanner({ title, link, images }) {
       </div>
       <div className="banner__images">
         {images.map((image) => (
-          <img src={image} />
+          <img src={image} alt="" />
         ))}
       </div>
     </div>

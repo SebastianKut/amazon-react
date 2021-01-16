@@ -10,7 +10,7 @@ import usaIcon from './media/usa-icon.png';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 
 function Header() {
-  const [{ basket, user }, dispatch] = useGlobalContext();
+  const [{ basket, user }] = useGlobalContext();
   const history = useHistory();
   const handleAuth = () => {
     if (user) {

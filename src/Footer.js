@@ -10,7 +10,8 @@ import { links } from './data/footerLinks';
 function Footer() {
   return (
     <div className="footer">
-      <a className="footer__backToTop" href="#">
+      {/* eslint-disable-next-line  */}
+      <a href="#" className="footer__backToTop">
         <p>Back to top</p>
       </a>
       <div className="footer__nav">
@@ -40,12 +41,15 @@ function Footer() {
       <div className="footer__copyright">
         <ul>
           <li>
+            {/* eslint-disable-next-line  */}
             <a href="#">Conditions of Use</a>
           </li>
           <li>
+            {/* eslint-disable-next-line  */}
             <a href="#">Privacy Notice</a>
           </li>
           <li>
+            {/* eslint-disable-next-line  */}
             <a href="#">Interest-Based Ads</a>
           </li>
           <li>© 1996-2020, Amazon.com, Inc. or its affiliates</li>

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import './CheckoutProduct.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
 import { useGlobalContext } from './StateProvider';
@@ -12,7 +12,7 @@ function CheckoutProduct({
   basketId,
   hideButton,
 }) {
-  const [{ basket }, dispatch] = useGlobalContext();
+  const [, dispatch] = useGlobalContext();
   const removeFromBasket = () => {
     dispatch({
       type: 'REMOVE_FROM_BASKET',

@@ -8,6 +8,7 @@ function FooterColumn({ title, links }) {
       <ul>
         {links?.map((link, index) => (
           <li key={index}>
+            {/* eslint-disable-next-line  */}
             <a href="#">{link}</a>
           </li>
         ))}

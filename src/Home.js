@@ -12,7 +12,7 @@ function Home() {
       <div className="home__container">
         <Carousel pagination={false} enableTilt={true}>
           {heroImages.map((img, index) => (
-            <img className="home__image" src={img} key={index} />
+            <img className="home__image" src={img} alt="" key={index} />
           ))}
         </Carousel>
         <CategoryRow categories={categoryRows.slice(0, 4)} />

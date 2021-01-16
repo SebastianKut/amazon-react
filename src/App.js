@@ -25,7 +25,6 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      console.log('This is user >>>', user);
       if (user) {
         dispatch({
           type: 'SET_USER',
@@ -38,7 +37,7 @@ function App() {
         });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>

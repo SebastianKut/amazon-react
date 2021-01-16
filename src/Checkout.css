@@ -1,5 +1,6 @@
 .checkout {
   display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: white;
   height: max-content;
@@ -22,4 +23,9 @@
 
 .checkout__right {
   margin-left: 20px;
+}
+
+.checkout__left > img {
+  height: 182px;
+  object-fit: cover;
 }

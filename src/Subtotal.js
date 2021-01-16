@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
   const history = useHistory();
-  const [{ basket }, dispatch] = useGlobalContext();
+  const [{ basket }] = useGlobalContext();
 
   return (
     <div className="subtotal">

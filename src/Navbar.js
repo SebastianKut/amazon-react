@@ -4,7 +4,7 @@ import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 import { useGlobalContext } from './StateProvider';
 
 function Navbar() {
-  const [{}, dispatch] = useGlobalContext();
+  const [, dispatch] = useGlobalContext();
 
   const handleShowMenu = () => {
     dispatch({
