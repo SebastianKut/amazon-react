@@ -23,6 +23,13 @@
 
 .payment__title {
   flex: 0.2;
+  display: flex;
+  align-items: flex-start;
+}
+
+.payment__titleLogo {
+  margin: 0 20px;
+  height: 25px;
 }
 
 .payment__address,

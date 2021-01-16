@@ -8,6 +8,7 @@ import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import axios from './axios';
 import { db } from './firebase';
+import stripe_logo from './media/stripe-logo.png';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useGlobalContext();
@@ -116,7 +117,8 @@ function Payment() {
         </div>
         <div className="payment__section">
           <div className="payment__title">
-            <h3>Payment method</h3>
+            <h3>Payment method </h3>
+            <img className="payment__titleLogo" src={stripe_logo} alt="" />
           </div>
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
