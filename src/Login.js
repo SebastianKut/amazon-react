@@ -5,8 +5,8 @@ import logo from './media/amazon-logo-black.png';
 import { auth } from './firebase';
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('test@email.com');
+  const [password, setPassword] = useState('test1234');
   const history = useHistory(); //it allows to change url and redirect
   const signIn = (e) => {
     e.preventDefault();

@@ -43,6 +43,7 @@
 
 .nav__border {
   border: 1px solid transparent;
+  border-radius: 2px;
   padding: 0 10px;
   margin: 0;
 }
