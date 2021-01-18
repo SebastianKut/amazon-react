@@ -22,9 +22,9 @@ function Navbar() {
         <ul className="navbar__links">
           <li className="nav__link nav__border">Today's Deals</li>
           <li className="nav__link nav__border">Customer Service</li>
-          <li className="nav__link nav__border">Gift Cards</li>
-          <li className="nav__link nav__border">Sell</li>
-          <li className="nav__link nav__border">Registry</li>
+          <li className="nav__link nav__border desktop">Gift Cards</li>
+          <li className="nav__link nav__border desktop">Sell</li>
+          <li className="nav__link nav__border desktop">Registry</li>
         </ul>
       </div>
       <div className="navbar__right nav__border">

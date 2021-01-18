@@ -127,3 +127,16 @@
   border: 1px solid white;
   cursor: pointer;
 }
+
+@media screen and (max-width: 840px) {
+  .deliverBorder,
+  .languageBorder,
+  .header__signInLink,
+  .header__ordersLink {
+    display: none;
+  }
+  .header__nav {
+    min-width: 25px;
+    margin: 5px;
+  }
+}

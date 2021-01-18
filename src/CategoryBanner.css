@@ -61,3 +61,17 @@
     overflow-x: scroll;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .banner__title {
+    justify-content: space-between;
+  }
+
+  .banner__title > span > h2 {
+    font-size: 15px;
+  }
+
+  .banner__title > span > a {
+    font-size: 14px;
+  }
+}

@@ -26,7 +26,7 @@ function Header() {
           <img src={logo} alt="" className="header__logo" />
         </div>
       </Link>
-      <div className="header__border">
+      <div className="header__border deliverBorder">
         <div className="header__deliver">
           <RoomOutlinedIcon />
           <div className="header__option">
@@ -40,12 +40,12 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <div className="header__border">
+        <div className="header__border languageBorder">
           <div className="header__option header__language">
             <img className="header__flag" src={usaIcon} alt="" />
           </div>
         </div>
-        <Link to={!user && '/login'}>
+        <Link to={!user && '/login'} className="header__signInLink">
           <div className="header__border">
             <div className="header__option" onClick={handleAuth}>
               <span className="header__optionLineOne">
@@ -57,7 +57,7 @@ function Header() {
             </div>
           </div>
         </Link>
-        <Link to={!user ? '/login' : '/orders'}>
+        <Link to={!user ? '/login' : '/orders'} className="header__ordersLink">
           <div className="header__border">
             <div className="header__option">
               <span className="header__optionLineOne">Returns</span>
