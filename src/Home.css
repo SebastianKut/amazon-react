@@ -6,7 +6,7 @@
 .home__container {
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
+  max-width: 90%;
   padding-bottom: 10px;
 }
 
@@ -18,7 +18,7 @@
 /* SLIDER */
 
 .rec-carousel-wrapper {
-  margin-bottom: -360px;
+  margin-bottom: -24%;
 }
 
 .rec-carousel {
@@ -29,7 +29,7 @@
 .rec-arrow-right {
   position: absolute;
   z-index: 6999;
-  top: 100px;
+  top: 17%;
   font-weight: 100 !important;
   font-size: 2.5rem !important;
   background-color: transparent !important;
@@ -48,4 +48,17 @@
 .rec-slider-container {
   margin: 0 !important;
   z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .home__container {
+    max-width: 97%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .rec-arrow-left,
+  .rec-arrow-right {
+    display: none;
+  }
 }
