@@ -20,4 +20,13 @@
 
 .order__date {
   margin-bottom: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+@media screen and (max-width: 900px) {
+  .order__number,
+  .order__date {
+    font-size: 14px;
+  }
 }

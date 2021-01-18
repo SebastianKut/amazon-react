@@ -23,9 +23,28 @@
 
 .checkout__right {
   margin-left: 20px;
+  display: flex;
 }
 
 .checkout__left > img {
   height: 182px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .checkout__left > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .checkout {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .checkout__right {
+    margin-left: 0;
+    background-color: blue;
+    width: 80%;
+  }
 }
