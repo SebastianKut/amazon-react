@@ -12,17 +12,17 @@ The website is fully responsive and tries to recreate current Amazon's design co
 
 To log in as a client you can use following credentials:
 
-email: test@email.com
-passowrd: test1234
+email: test@email.com <br>
+passowrd: test1234 <br>
 
 ## Card Details
 
 To test stripe payment enter following Test Credit Card details:
 
-Card number: 4242 4242 4242 4242
-Exp: 04/24
-CVC: 424
-ZIP: 24242
+Card number: 4242 4242 4242 4242 <br>
+Exp: 04/24 <br>
+CVC: 424 <br>
+ZIP: 24242 <br>
 
 ## Logic behind stripe payment implementation
 
