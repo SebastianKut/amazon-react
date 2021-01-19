@@ -2,11 +2,7 @@
 
 ### Live link https://clone-ef788.web.app/
 
-This Amazon clone was build using React JS, Node JS, Express and CSS. It itegrates Stripe payments, authentication and was deployed on Firebase.
-
-It utilizes modern ReactJS concepts such as functional components, Hooks, Context Api and reducer for global state management as well as React Router.
-
-The website is fully responsive and tries to recreate current Amazon's design concepts.
+This Amazon clone was build using React JS, Node JS, Express and CSS. It itegrates Stripe payments, authentication and was deployed on Firebase. It utilizes modern ReactJS concepts such as functional components, Hooks, Context Api and reducer for global state management as well as React Router. The website is fully responsive and tries to recreate current Amazon's design concepts.
 
 ## Demo Login credentials
 

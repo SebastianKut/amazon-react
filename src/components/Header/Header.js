@@ -31,7 +31,7 @@ function Header() {
           <RoomOutlinedIcon />
           <div className="header__option">
             <span className="header__optionLineOne">Deliver to</span>
-            <span className="header__optionLineTwo">Poland</span>
+            <span className="header__optionLineTwo">Europe</span>
           </div>
         </div>
       </div>
