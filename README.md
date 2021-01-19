@@ -1,5 +1,7 @@
 # Recreation of AMAZON Full Stack WebApp with React JS and Stripe Payments
 
+### Live link https://clone-ef788.web.app/
+
 This Amazon clone was build using React JS, Node JS, Express and CSS. It itegrates Stripe payments, authentication and was deployed on Firebase.
 
 It utilizes modern ReactJS concepts such as functional components, Hooks, Context Api and reducer for global state management as well as React Router.
