@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
-import { useGlobalContext } from './StateProvider';
+import { useGlobalContext } from '../../StateProvider';
 
 function Navbar() {
   const [, dispatch] = useGlobalContext();

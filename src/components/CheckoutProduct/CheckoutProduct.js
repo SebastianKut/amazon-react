@@ -1,7 +1,7 @@
 import React from 'react';
 import './CheckoutProduct.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
-import { useGlobalContext } from './StateProvider';
+import { useGlobalContext } from '../../StateProvider';
 
 function CheckoutProduct({
   id,

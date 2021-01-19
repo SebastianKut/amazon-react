@@ -1,11 +1,11 @@
 import React from 'react';
 import './Footer.css';
-import logo from './media/amazon-logo.png';
-import flag from './media/usa-icon.png';
+import logo from '../../media/amazon-logo.png';
+import flag from '../../media/usa-icon.png';
 import LanguageIcon from '@material-ui/icons/Language';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import FooterColumn from './FooterColumn';
-import { links } from './data/footerLinks';
+import FooterColumn from '../FooterColumn/FooterColumn';
+import { links } from '../../data/footerLinks';
 
 function Footer() {
   return (

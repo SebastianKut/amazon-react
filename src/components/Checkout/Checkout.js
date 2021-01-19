@@ -1,8 +1,8 @@
 import React from 'react';
 import './Checkout.css';
-import Subtotal from './Subtotal';
-import CheckoutProduct from './CheckoutProduct';
-import { useGlobalContext } from './StateProvider';
+import Subtotal from '../Subtotal/Subtotal';
+import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
+import { useGlobalContext } from '../../StateProvider';
 
 function Checkout() {
   const [{ basket, user }] = useGlobalContext();

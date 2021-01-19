@@ -1,15 +1,13 @@
 import React from 'react';
 import './Product.css';
 import StarRateOutlinedIcon from '@material-ui/icons/StarRateOutlined';
-import { useGlobalContext } from './StateProvider';
+import { useGlobalContext } from '../../StateProvider';
 //import StarHalfOutlinedIcon from '@material-ui/icons/StarHalfOutlined';
 import { v4 as uuidv4 } from 'uuid';
 import TextTruncate from 'react-text-truncate';
 
 function Product({ id, title, price, image, rating, global_ratings }) {
-  const [{ basket }, dispatch] = useGlobalContext();
-
-  console.log('basket>>>', basket);
+  const [, dispatch] = useGlobalContext();
 
   const addToBasket = () => {
     dispatch({

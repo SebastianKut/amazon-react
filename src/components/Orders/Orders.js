@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Orders.css';
-import { useGlobalContext } from './StateProvider';
-import { db } from './firebase';
-import Order from './Order';
+import { useGlobalContext } from '../../StateProvider';
+import { db } from '../../vendors/firebase';
+import Order from '../Order/Order';
 
 function Orders() {
   const [{ user }] = useGlobalContext();

@@ -1,6 +1,6 @@
 import React from 'react';
 import './CategoryRow.css';
-import Category from './Category.js';
+import Category from '../Category/Category.js';
 
 function CategoryRow({ categories }) {
   return (

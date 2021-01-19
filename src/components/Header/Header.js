@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.css';
-import logo from './media/amazon-logo.png';
+import logo from '../../media/amazon-logo.png';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { Link, useHistory } from 'react-router-dom';
-import { useGlobalContext } from './StateProvider';
-import { auth } from './firebase';
-import usaIcon from './media/usa-icon.png';
+import { useGlobalContext } from '../../StateProvider';
+import { auth } from '../../vendors/firebase';
+import usaIcon from '../../media/usa-icon.png';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 
 function Header() {

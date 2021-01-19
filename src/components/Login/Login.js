@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Login.css';
-import logo from './media/amazon-logo-black.png';
-import { auth } from './firebase';
+import logo from '../../media/amazon-logo-black.png';
+import { auth } from '../../vendors/firebase';
 
 function Login() {
   const [email, setEmail] = useState('test@email.com');

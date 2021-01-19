@@ -49,13 +49,13 @@
   padding: 10px 30px 10px 30px;
 }
 
-.sideMenu__links__section > ul > li {
+.sideMenu__links__section > ul > a > li {
   padding: 15px 30px;
   font-size: 14px;
   font-weight: 500;
 }
 
-.sideMenu__links__section > ul > li:hover {
+.sideMenu__links__section > ul > a > li:hover {
   background-color: #eaeded;
   cursor: pointer;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Home.css';
-import CategoryRow from './CategoryRow';
-import CategoryBanner from './CategoryBanner';
-import { categoryRows, categoryBanners } from './categories';
+import CategoryRow from '../CategoryRow/CategoryRow';
+import CategoryBanner from '../CategoryBanner/CategoryBanner';
+import { categoryRows, categoryBanners } from '../../data/categories';
 import Carousel from 'react-elastic-carousel';
-import { heroImages } from './data/heroImages';
+import { heroImages } from '../../data/heroImages';
 
 function Home() {
   return (

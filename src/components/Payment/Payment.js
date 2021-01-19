@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import CheckoutProduct from './CheckoutProduct';
+import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import './Payment.css';
-import { useGlobalContext } from './StateProvider';
+import { useGlobalContext } from '../../StateProvider';
 import { Link, useHistory } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
-import { getBasketTotal } from './reducer';
-import axios from './axios';
-import { db } from './firebase';
-import stripe_logo from './media/stripe-logo.png';
+import { getBasketTotal } from '../../reducer';
+import axios from '../../vendors/axios';
+import { db } from '../../vendors/firebase';
+import stripe_logo from '../../media/stripe-logo.png';
 
 function Payment() {
   const [{ basket, user }, dispatch] = useGlobalContext();

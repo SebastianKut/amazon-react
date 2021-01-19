@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import Header from './Header';
-import Navbar from './Navbar';
-import Home from './Home';
-import Shop from './Shop';
-import Login from './Login';
-import Payment from './Payment';
-import Orders from './Orders';
-import Footer from './Footer';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import Shop from './components/Shop/Shop';
+import Login from './components/Login/Login';
+import Payment from './components/Payment/Payment';
+import Orders from './components/Orders/Orders';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Checkout from './Checkout';
-import { auth } from './firebase';
+import Checkout from './components/Checkout/Checkout';
+import { auth } from './vendors/firebase';
 import { useGlobalContext } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js'; //npm install @stripe/stripe-js
 import { Elements } from '@stripe/react-stripe-js'; //npm install @stripe/react-stripe-js
-import SideMenu from './SideMenu';
+import SideMenu from './components/SideMenu/SideMenu';
 
 const promise = loadStripe(
   'pk_test_51I7wrjLZv7WKvm6KLSx3FzeQ8fuxzQAdcH11QlQRFRY2qwPCmZzfOSegwCdXvofJzphwj9OjnJSqQyMOqnlio8sY00acMndlb8'

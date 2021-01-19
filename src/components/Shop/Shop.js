@@ -1,7 +1,7 @@
 import React from 'react';
 import './Shop.css';
-import Product from './Product';
-import { products } from './products';
+import Product from '../Product/Product';
+import { products } from '../../data/products';
 
 function Shop() {
   return (

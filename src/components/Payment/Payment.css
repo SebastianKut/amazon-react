@@ -38,6 +38,10 @@
   flex: 0.8;
 }
 
+.payment__address {
+  padding-left: 20px;
+}
+
 .payment__details > form {
   max-width: 400px;
 }
